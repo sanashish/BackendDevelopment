@@ -35,7 +35,7 @@ app.get("/movies", async (req, res) => {
     }
     res.status(200).json(result);
   } catch (error) {
-    return res.status(500).json({ message: error.message });
+    return res.status(500).json({ error: error.message });
   }
 });
 
@@ -56,7 +56,7 @@ app.get("/movies/genre/:genre", async (req, res) => {
     }
     res.status(200).json(result);
   } catch (error) {
-    return res.status(500).json({ message: error.messaage });
+    return res.status(500).json({ error: error.messaage });
   }
 });
 
@@ -75,7 +75,7 @@ app.get("/movies/details/:id", async (req, res) => {
     }
     res.status(200).json(result);
   } catch (error) {
-    return res.status(500).json({ message: error.message });
+    return res.status(500).json({ error: error.message });
   }
 });
 
@@ -96,7 +96,7 @@ app.get("/movies/release-year/:year", async (req, res) => {
     }
     res.status(200).json(result);
   } catch (error) {
-    return res.status(500).json({ message: error.message });
+    return res.status(500).json({ error: error.message });
   }
 });
 
