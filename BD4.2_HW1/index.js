@@ -33,7 +33,7 @@ app.get("/books", async (req, res) => {
     }
     res.status(200).json(result);
   } catch (error) {
-    return res.status(500).json({ message: error.message });
+    return res.status(500).json({ error: error.message });
   }
 });
 
@@ -54,7 +54,7 @@ app.get("/books/author/:author", async (req, res) => {
     }
     res.status(200).json(result);
   } catch (error) {
-    return res.status(500).json({ message: error.messaage });
+    return res.status(500).json({ error: error.messaage });
   }
 });
 
