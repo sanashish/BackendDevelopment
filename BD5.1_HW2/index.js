@@ -3,7 +3,7 @@ let { sequelize } = require("./lib/index");
 let { employee } = require("./models/employee.model");
 let app = express();
 
-let employeeData = [
+let employees = [
   {
     name: "Rajkumar",
     department: "Sales",
@@ -39,7 +39,7 @@ let employeeData = [
 app.get("/seed_db", async (req, res) => {
   try {
     await sequelize.sync({ force: true });
-    await employee.bulkCreate(employeeData);
+    await employee.bulkCreate(employees);
     res.status(200).json({ message: "Database Seeding Successful" });
   } catch (error) {
     res
