@@ -117,7 +117,7 @@ app.get("/users/:id/dislike", async (req, res) => {
     if (!response.message) {
       return res
         .status(404)
-        .json({ message: "This track is not in your liked list." });
+        .json({ message: "This book is not in your liked list." });
     }
     res.status(200).json(response);
   } catch (error) {
